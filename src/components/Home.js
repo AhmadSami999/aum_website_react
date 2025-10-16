@@ -144,7 +144,7 @@ function Home() {
 <section id="next-section" className="icon-section">
   <div className="icons-column">
     {[
-      { src: icon1, hover: icon1Hover, label: 'Academic Progress 112', url: 'https://aum.mt/our-university' },
+      { src: icon1, hover: icon1Hover, label: 'Academic Progress', url: 'https://aum.mt/our-university' },
       { src: icon2, hover: icon2Hover, label: 'Student Housing', url: 'https://aum.mt/student-housing' },
       { src: icon3, hover: icon3Hover, label: 'Apply Now', url: 'https://aum.mt/apply' },
       { src: icon4, hover: icon4Hover, label: 'Academic Calendars', url: 'https://aum.edu.mt/academics/academic-calendar/' }
