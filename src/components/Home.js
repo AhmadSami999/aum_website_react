@@ -28,7 +28,7 @@ function Home() {
       videoUrl: ""
     },
     welcome: {
-      greeting: "Welcome to the",
+      greeting: "Welcome to the TEST",
       name: "American University of Malta",
       text1: "We embrace the dynamic American-style education, enriched by a vibrant European setting and a diverse, multicultural student body.",
       text2: "This fusion creates the ideal environment, enhancing your learning experience with unique global perspectives."
