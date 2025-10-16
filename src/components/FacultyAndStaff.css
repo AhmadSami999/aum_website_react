@@ -1,0 +1,196 @@
+.faculty-directory-page {
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Custom Header with Red Box and Traditional Arrow */
+  .faculty-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    padding-left: 130px; /* increased left padding for red box and arrow */
+  }
+  
+  .faculty-header h1 {
+    margin: 0;
+    font-size: 50px;
+    color: #104b87; /* dark blue */
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* The red box positioned at the very left and made taller */
+  .red-box {
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 100px; /* taller red box */
+    background-color: #e21c21;
+  }
+  
+  /* Arrow Tail: a blue line extending from the red box */
+  .red-box::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 70%; /* start inside the red box near its right edge */
+    transform: translateY(-50%);
+    width: 60px; /* longer tail */
+    height: 2.5px;
+    background-color: #104b87; /* blue */
+  }
+  
+  /* Arrow Head: a blue triangle at the end of the tail */
+  .red-box::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(70% + 50px); /* positioned immediately after the tail */
+    transform: translateY(-50%);
+    border-top: 7.5px solid transparent;
+    border-bottom: 7.55px solid transparent;
+    border-left: 10px solid #104b87; /* blue */
+  }
+  
+  /* Grey Info Box Below Header */
+  .faculty-info-box {
+    width: calc(100% - 70px - 20px); /* subtract left margin (70px) and right margin (20px) */
+    margin: 18px 20px 0 70px; /* left margin touches red box; right margin provides spacing */
+    background-color: #f0f0f0;
+    padding: 60px;
+    text-align: left;
+    box-sizing: border-box;
+  }
+  
+  .faculty-info-box p {
+    margin: 0;
+    font-size: 20px;
+    line-height: 28px;
+    color: #104b87;
+  }
+  
+  /* Provost Section Using CSS Grid */
+  /* The grid row's height is determined solely by the content of .provost-info */
+  .provost-section {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin: 0 20px 0 70px;
+  }
+  
+  /* Left Column: Use a background image so it exactly fills the grid cell */
+  .provost-image {
+    background-image: url('../assets/provost.webp');
+    background-size: cover;
+    background-position: center;
+    /* No fixed height is set; it fills the grid row (the natural height of .provost-info) */
+  }
+  
+  /* Right Column: Provost Info */
+  .provost-info {
+    background-color: #5c80a5; /* blue background */
+    color: #ffffff; /* white text for contrast */
+    padding: 50px;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  .provost-info h2,
+  .provost-info h3 {
+    margin-top: 0;
+  }
+  
+  /* College Sections */
+  .college-section {
+    margin: 40px 20px 0 70px;
+    text-align: center;
+  }
+  
+  .college-section h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    color: #104b87;
+  }
+  
+  .divider {
+    width: 50px;
+    height: 2px;
+    margin: 0 auto 30px auto;
+    background-color: #e21c21;
+  }
+  
+  .college-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .college-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Make all faculty images uniform - crop instead of stretch */
+  .college-item img {
+    width: 100%;
+    height: 360px; /* Fixed height for uniformity - 20% taller than 300px */
+    object-fit: cover; /* Crop image to fit while maintaining aspect ratio */
+    object-position: center top; /* Focus on center-top to keep faces visible */
+    display: block;
+  }
+  
+  /* Blue info box under each image */
+  .college-info {
+    background-color: #5c80a5; /* same blue as provost section */
+    color: #ffffff;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .college-info h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+  }
+  
+  .college-info p {
+    margin: 3px 0;
+    font-size: 14px;
+  }
+  
+  /* Media Query for screens 768px and lower */
+  @media (max-width: 768px) {
+    .faculty-header h1 {
+      font-size: 30px;
+    }
+    
+    .provost-section {
+      display: block;
+      margin: 0 20px 0 70px;
+    }
+    
+    /* For smaller screens, revert to block layout */
+    .provost-image,
+    .provost-info {
+      width: 100%;
+      height: auto;
+    }
+    
+    /* Ensure the provost image is taller on mobile to avoid cutting off the head */
+    .provost-image {
+      min-height: 500px; /* adjust as needed to preserve the image */
+      background-position: top; /* align the top of the image so the head isn't cut off */
+      margin-bottom: 20px;
+    }
+    
+    /* Change the people grid (college sections) to a single column */
+    .college-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    /* Adjust image height for mobile */
+    .college-item img {
+      height: 300px; /* Slightly smaller on mobile but still uniform - 20% taller than 250px */
+    }
+  }

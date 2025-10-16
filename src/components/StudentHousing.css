@@ -1,0 +1,703 @@
+/* STUDENT HOUSING PAGE — Following OurUniversity styling patterns */
+.aum-student-housing-page {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* Header Section */
+.aum-student-housing-page .aum-page-header {
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.aum-student-housing-page .aum-page-header h1 {
+  margin: 0;
+  font-size: 56px;
+  text-align: left;
+  color: #104b87; /* dark blue */
+}
+
+/* Grey Full-Width Welcome Box */
+.aum-student-housing-page .aum-welcome-box {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 60px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.aum-student-housing-page .aum-welcome-box .aum-welcome-text {
+  width: 100%;
+  text-align: left;
+}
+
+.aum-student-housing-page .aum-welcome-box p {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #104b87;
+}
+
+/* Two-Column Section */
+.aum-student-housing-page .aum-two-column-section {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  padding: 0 0 20px 0;
+}
+
+/* Left Column: Text with Blue Background */
+.aum-student-housing-page .aum-text-column {
+  flex: 1;
+  background-color: #5c80a5;
+  color: white;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+/* Pricing section specific styling */
+.aum-student-housing-page .aum-two-column-section.aum-pricing-section {
+  gap: 40px;
+  padding: 40px 0;
+  align-items: flex-start;
+}
+
+.aum-student-housing-page .aum-two-column-section.aum-pricing-section .aum-text-column {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+.aum-student-housing-page .aum-text-column p {
+  margin: 0 0 15px 0;
+}
+
+.aum-student-housing-page .aum-text-column strong {
+  font-weight: bold;
+}
+
+/* Right Column: Image */
+.aum-student-housing-page .aum-image-column {
+  flex: 1;
+  position: relative;
+}
+
+.aum-student-housing-page .aum-image-column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Swapped layout: image on left, text on right */
+.aum-student-housing-page .aum-two-column-section.aum-swapped .aum-image-column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+/* Section Headings */
+.aum-student-housing-page .aum-section-heading {
+  padding: 20px 0;
+}
+
+.aum-student-housing-page .aum-section-heading h1 {
+  margin: 0;
+  font-size: 56px;
+  text-align: left;
+  color: #104b87;
+}
+
+/* Info Boxes */
+.aum-student-housing-page .aum-info-box {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 60px;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.aum-student-housing-page .aum-info-box .aum-info-text {
+  width: 100%;
+  text-align: left;
+}
+
+.aum-student-housing-page .aum-info-box p {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #104b87;
+}
+
+/* Pricing Cards */
+.aum-student-housing-page .aum-pricing-card {
+  background-color: #5c80a5;
+  color: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.aum-student-housing-page .aum-pricing-card h3 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.aum-student-housing-page .aum-pricing-card p {
+  color: white;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.aum-student-housing-page .aum-pricing-card .aum-price-highlight {
+  background-color: #104b87;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 6px;
+  margin: 15px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(16, 75, 135, 0.3);
+}
+
+.aum-student-housing-page .aum-pricing-card .aum-note {
+  color: #d32f2f;
+  font-weight: bold;
+  background-color: #ffebee;
+  padding: 8px;
+  border-radius: 4px;
+  border-left: 3px solid #d32f2f;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.aum-student-housing-page .aum-pricing-card .aum-minimum-stay {
+  background-color: #fff3e0;
+  padding: 8px;
+  border-radius: 4px;
+  border-left: 3px solid #ff9800;
+  color: #e65100;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.aum-student-housing-page .aum-calendar-note {
+  font-style: italic;
+  color: #666;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+/* Image Gallery */
+.aum-student-housing-page .aum-image-gallery {
+  margin: 20px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aum-student-housing-page .aum-gallery-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.aum-student-housing-page .aum-image-display {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 30px;
+}
+
+.aum-student-housing-page .aum-image-display img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.aum-student-housing-page .aum-gallery-btn {
+  background-color: #5c80a5;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.aum-student-housing-page .aum-gallery-btn:hover {
+  background-color: #fcbf0b;
+}
+
+.aum-student-housing-page .aum-prev-btn {
+  left: 0;
+}
+
+.aum-student-housing-page .aum-next-btn {
+  right: 0;
+}
+
+.aum-student-housing-page .aum-image-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.aum-student-housing-page .aum-indicator {
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0;
+}
+
+.aum-student-housing-page .aum-indicator.aum-active {
+  background-color: #5c80a5;
+}
+
+.aum-student-housing-page .aum-indicator:hover {
+  background-color: #fcbf0b;
+}
+
+/* Document Tabs */
+.aum-student-housing-page .aum-document-tabs {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding:0px 5px;
+}
+
+.aum-student-housing-page .aum-tab-buttons {
+  display: flex;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+
+.aum-student-housing-page .aum-tab-btn {
+  background-color: transparent;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #666;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+
+}
+
+.aum-student-housing-page .aum-tab-btn:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.aum-student-housing-page .aum-tab-btn.aum-active {
+  background-color: #5c80a5;
+  color: white;
+}
+
+.aum-student-housing-page .aum-tab-content {
+  padding: 25px;
+  background-color: #fff;
+}
+
+/* Links */
+.aum-student-housing-page a {
+  color: #5c80a5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.aum-student-housing-page a:hover {
+  text-decoration: underline;
+}
+
+/* Links in blue sections (text-column) */
+.aum-student-housing-page .aum-text-column a {
+  color: #fcbf0b;
+  text-decoration: underline;
+}
+
+.aum-student-housing-page .aum-text-column a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Buttons */
+.aum-student-housing-page .aum-official-button,
+.aum-student-housing-page .aum-apply-btn {
+  background-color: #5c80a5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.aum-student-housing-page .aum-official-button:hover,
+.aum-student-housing-page .aum-apply-btn:hover {
+  background-color: #fcbf0b;
+}
+
+/* Contact Section */
+.aum-student-housing-page .aum-contact-section {
+  padding: 60px 0;
+  text-align: left;
+}
+
+.aum-student-housing-page .aum-contact-section h1 {
+  font-size: 56px;
+  color: #104b87;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.aum-student-housing-page .aum-red-separator {
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  margin-bottom: 20px;
+}
+
+.aum-student-housing-page .aum-contact-section p {
+  font-size: 20px;
+  line-height: 28px;
+  color: #104b87;
+  margin-bottom: 15px;
+}
+
+/* Contact Form */
+.aum-student-housing-page .aum-contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-direction: row;
+}
+
+.aum-student-housing-page .aum-contact-left,
+.aum-student-housing-page .aum-contact-right {
+  flex: 1 1 320px;
+}
+
+.aum-student-housing-page .aum-contact-form input,
+.aum-student-housing-page .aum-contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #000;
+  border-radius: 0;
+  font-size: 16px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.aum-student-housing-page .aum-contact-form textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.aum-student-housing-page .aum-contact-left input:last-child {
+  margin-bottom: 0;
+}
+
+.aum-student-housing-page .aum-contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.aum-student-housing-page .aum-send-btn {
+  margin-top: 10px;
+  width: 150px;
+  background-color: #5c80a5;
+  color: #fff;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.aum-student-housing-page .aum-send-btn:hover {
+  background-color: #fcbf0b;
+}
+
+.aum-student-housing-page .aum-contact-right textarea {
+  align-self: stretch;
+}
+
+/* Desktop alignment */
+@media (min-width: 769px) {
+  .aum-student-housing-page .aum-contact-right textarea {
+    min-height: 252px;
+    margin-bottom: 0;
+  }
+  
+  .aum-student-housing-page .aum-welcome-box .aum-welcome-text,
+  .aum-student-housing-page .aum-info-box .aum-info-text {
+    width: 100%;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .aum-student-housing-page .aum-page-header h1,
+  .aum-student-housing-page .aum-section-heading h1,
+  .aum-student-housing-page .aum-contact-section h1 {
+    font-size: 36px;
+  }
+  
+  .aum-student-housing-page .aum-two-column-section {
+    flex-direction: column;
+  }
+  
+  .aum-student-housing-page .aum-welcome-box .aum-welcome-text,
+  .aum-student-housing-page .aum-info-box .aum-info-text {
+    width: 100%;
+  }
+  
+  .aum-student-housing-page .aum-welcome-box,
+  .aum-student-housing-page .aum-info-box {
+    padding: 40px 20px;
+  }
+  
+  .aum-student-housing-page .aum-text-column {
+    padding: 40px 20px;
+  }
+  
+  .aum-student-housing-page .aum-welcome-box p,
+  .aum-student-housing-page .aum-info-box p,
+  .aum-student-housing-page .aum-text-column {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .aum-student-housing-page .aum-contact-section {
+    padding: 40px 20px;
+  }
+
+  .aum-student-housing-page .aum-contact-section p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .aum-student-housing-page .aum-contact-form {
+    flex-direction: column;
+  }
+  
+  .aum-student-housing-page .aum-contact-left,
+  .aum-student-housing-page .aum-contact-right {
+    flex: 1 1 100%;
+  }
+
+  .aum-student-housing-page .aum-contact-right {
+    align-items: stretch;
+  }
+  
+  .aum-student-housing-page .aum-send-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .aum-student-housing-page .aum-contact-form textarea {
+    min-height: 120px;
+  }
+
+  /* Mobile Gallery */
+  .aum-student-housing-page .aum-gallery-container {
+    position: relative;
+  }
+  
+  .aum-student-housing-page .aum-gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .aum-student-housing-page .aum-image-display {
+    margin: 0 60px;
+  }
+
+  .aum-student-housing-page .aum-image-indicators {
+    display: none;
+  }
+
+  /* Mobile tabs */
+  .aum-student-housing-page .aum-tab-buttons {
+    flex-direction: column;
+  }
+  
+  .aum-student-housing-page .aum-tab-btn {
+    flex: none;
+    min-width: auto;
+  }
+}
+
+/* Add these styles to your existing CSS file */
+
+/* Improve spacing for document tabs container */
+.aum-student-housing-page .aum-document-tabs {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0px 5px;
+  margin-top: 30px; /* Add space from section above */
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Add more spacing for mobile */
+  .aum-student-housing-page .aum-document-tabs {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Improve mobile tab buttons */
+  .aum-student-housing-page .aum-tab-buttons {
+    flex-direction: column;
+    background-color: #f8f9fa;
+    gap: 2px; /* Add small gap between buttons */
+    padding: 8px;
+  }
+  
+  .aum-student-housing-page .aum-tab-btn {
+    flex: none;
+    min-width: auto;
+    margin: 0;
+    border-radius: 6px; /* Add rounded corners for better separation */
+    padding: 18px 20px; /* Increase padding for easier tapping */
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+
+  .aum-student-housing-page .aum-tab-btn:hover {
+    background-color: #e9ecef;
+    color: #333;
+    border-color: #dee2e6;
+  }
+
+  .aum-student-housing-page .aum-tab-btn.aum-active {
+    background-color: #5c80a5;
+    color: white;
+    border-color: #5c80a5;
+    box-shadow: 0 2px 4px rgba(92, 128, 165, 0.3);
+  }
+
+  /* Improve tab content spacing */
+  .aum-student-housing-page .aum-tab-content {
+    padding: 30px 20px;
+    background-color: #fff;
+    margin-top: 5px;
+  }
+
+  /* Add visual separator */
+  .aum-student-housing-page .aum-tab-content::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+/* Alternative approach: Use a more specific reset for the StudentHousing page */
+.aum-student-housing-page {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0 auto;
+  background: #fff;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  /* Add this to prevent navbar from being affected by page styles */
+  position: relative;
+}
+
+
+/* If the above doesn't work, try this more aggressive approach */
+body.student-housing-page {
+  overflow-x: hidden;
+}
+
+/* Add this to your StudentHousing.css file to fix navbar overflow */
+
+
+
+/* Alternative approach: Use a more specific reset for the StudentHousing page */
+.aum-student-housing-page {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0 auto;
+  background: #fff;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  /* Add this to prevent navbar from being affected by page styles */
+  position: relative;
+}
+
+
+
+/* If the above doesn't work, try this more aggressive approach */
+body.student-housing-page {
+  overflow-x: hidden;
+}

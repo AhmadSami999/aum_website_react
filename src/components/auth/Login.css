@@ -1,0 +1,250 @@
+/********************************************************
+  Login page with three blue boxes for Email, OIS, and Moodle.
+  Based on SignIn.css but with login boxes instead of form.
+********************************************************/
+
+/* Overall container with a horizontal gradient for DESKTOP by default */
+.loginContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #666666, #5c80a5);
+  padding: 20px;
+  position: relative;
+}
+
+/* Left-side background image panel */
+.loginBgContainer {
+  flex: 1;
+  min-height: 50vh;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* White login card on the right */
+.loginCard {
+  width: 100%;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: -10px 0 25px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  order: 2;
+}
+
+/* The "Read More" widget on desktop is fixed bottom-left */
+.bottomLeftWidget {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  text-align: left;
+  z-index: 999;
+  order: 1;
+}
+
+/************************************
+   "Read More" button + text styles
+************************************/
+.whiteButtonBlueText {
+  position: relative;
+  top: -40px;
+  left: 50px;
+  background-color: #fff;
+  color: #5c80a5;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.whiteButtonBlueText:hover {
+  background-color: #fcbf0b;
+  color: #5c80a5;
+}
+
+.copyRightText {
+  color: #fff;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/******************************************
+   Login Card Content
+******************************************/
+/* Top image */
+.loginImage {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 120px;
+}
+
+/* "STUDENT LOGIN" heading */
+.loginCard h2 {
+  text-align: center;
+  margin-bottom: 0px;
+  color: #939393;
+  font-weight: 900;
+}
+
+/* Subtext under heading */
+.welcomeText {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #9e9e9e;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+/******************************************
+   Login Boxes Container
+******************************************/
+.loginBoxes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* Individual login box */
+.loginBox {
+  display: block;
+  background-color: #5c80a5;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.loginBox:hover {
+  background-color: #fcbf0b;
+  color: #5c80a5;
+  transform: translateY(-2px);
+}
+
+.loginBoxContent {
+  text-align: center;
+}
+
+.loginBoxContent h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.loginBoxContent p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Help text */
+.loginHelpText {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #9e9e9e;
+  font-weight: 600;
+}
+
+.loginHelpText a {
+  color: #5c80a5;
+  text-decoration: none;
+}
+
+.loginHelpText a:hover {
+  color: #fcbf0b;
+}
+
+/* Centered logo at the bottom of the card */
+.logoContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.aumLogo {
+  max-width: 120px;
+  display: inline-block;
+}
+
+/* ─── Thin top bar (shared look) ─── */
+.thin-top-bar {
+  background: #f0f0f0;
+  padding: 0.5rem 5rem;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.thin-top-bar .thin-bar-content .right-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.thin-top-bar a {
+  color: #000;
+  text-decoration: none;
+}
+
+/*******************************************************
+   MOBILE STYLES
+*******************************************************/
+@media (max-width: 768px) {
+  /* Switch gradient to top->bottom */
+  .loginContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #666666, #5c80a5);
+  }
+
+  /* hide the left background image */
+  .loginBgContainer {
+    display: none;
+  }
+
+  /* Put the card first, the widget second */
+  .loginCard {
+    order: 1;
+    margin-bottom: 20px;
+    box-shadow: none;
+    max-width: 350px;
+  }
+
+  .bottomLeftWidget {
+    order: 2;
+    position: static;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Remove the button offset on mobile */
+  .whiteButtonBlueText {
+    position: static;
+    top: auto;
+    left: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Adjust thin top bar for mobile */
+  .thin-top-bar {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .thin-top-bar .thin-bar-content .right-links {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}

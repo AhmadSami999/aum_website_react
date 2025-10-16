@@ -1,0 +1,318 @@
+/* BoardOfTrustees.css */
+
+.board-page {
+  width: 100%;
+  padding: 20px 10px;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Page Header */
+.page-header {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 10px;
+  text-align: left;
+}
+
+.page-header h1 {
+  font-size: clamp(32px, 6vw, 48px);
+  color: #104b87;
+  margin-bottom: 5px;
+  padding: 0;
+  font-weight: 700;
+}
+
+.page-header .subtitle {
+  font-size: clamp(20px, 3vw, 28px);
+  color: #5c80a5;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Top Leadership Container */
+.top-leadership {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+/* Top Leadership specific card styles */
+.top-leadership .trustee-card {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.top-leadership .trustee-info {
+  min-height: 60px;
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.top-leadership .trustee-info h2 {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+}
+
+.top-leadership .trustee-info p {
+  font-size: 13px;
+}
+
+/* Unified Card Styles */
+.trustee-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.trustee-card .image-container {
+  background-color: #f0f0f0;
+  height: 450px;
+  transition: transform 0.3s ease;
+}
+
+.trustee-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.trustee-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.trustee-info {
+  background: #5c80a5;
+  color: white;
+  padding: 20px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.trustee-info h2,
+.trustee-info h3 {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.trustee-info p {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Members Section */
+.members-section {
+  background-color: #fff;
+  padding: 40px 10px;
+  margin: 0;
+}
+
+.members-section > h2 {
+  font-size: 28px;
+  color: #104b87;
+  text-align: left;
+  margin: 0 auto 5px;
+  font-weight: 700;
+  max-width: 1200px;
+  padding: 0 10px;
+}
+
+.members-section .members-subtitle {
+  font-size: 20px;
+  color: #5c80a5;
+  text-align: left;
+  margin: 0 auto 30px;
+  font-weight: 300;
+  max-width: 1200px;
+  padding: 0 10px;
+}
+
+.members-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Tablet Styles (768px and up) */
+@media (min-width: 768px) {
+  .board-page {
+    padding: 40px 20px;
+  }
+  
+  .page-header {
+    padding: 0 25px;
+  }
+  
+  .top-leadership {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 0 25px;
+    align-items: stretch;
+  }
+  
+  .top-leadership .trustee-info {
+    min-height: 70px;
+    padding: 15px;
+    flex-grow: 1;
+  }
+  
+  .top-leadership .trustee-info h2 {
+    font-size: 18px;
+  }
+  
+  .top-leadership .trustee-info p {
+    font-size: 14px;
+  }
+  
+  .trustee-card {
+    height: auto;
+  }
+  
+  .trustee-card .image-container {
+    height: 340px;
+  }
+  
+  .trustee-info h2,
+  .trustee-info h3 {
+    font-size: 20px;
+  }
+  
+  .trustee-info {
+    min-height: 140px;
+  }
+  
+  .members-section {
+    padding: 50px 20px;
+  }
+  
+  .members-section > h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+    padding: 0 25px;
+  }
+  
+  .members-section .members-subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+    padding: 0 25px;
+  }
+  
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 0 25px;
+  }
+}
+
+/* Desktop Styles (1024px and up) */
+@media (min-width: 1024px) {
+  .page-header {
+    padding: 0 35px;
+  }
+  
+  .top-leadership {
+    padding: 0 35px;
+    align-items: stretch;
+  }
+  
+  .top-leadership .trustee-info {
+    min-height: 100px;
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  .top-leadership .trustee-info h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .top-leadership .trustee-info p {
+    font-size: 15px;
+  }
+  
+  .trustee-card .image-container {
+    height: 400px;
+  }
+  
+  .trustee-info {
+    padding: 25px;
+    min-height: 250px;
+  }
+  
+  .trustee-info h2,
+  .trustee-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .trustee-info p {
+    font-size: 16px;
+  }
+  
+  .members-section {
+    padding: 60px 20px;
+  }
+  
+  .members-section > h2 {
+    font-size: 36px;
+    margin-bottom: 5px;
+    padding: 0 35px;
+  }
+  
+  .members-section .members-subtitle {
+    font-size: 26px;
+    margin-bottom: 50px;
+    padding: 0 35px;
+  }
+  
+  .members-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    padding: 0 35px;
+  }
+}
+
+/* Large Desktop Styles (1200px and up) */
+@media (min-width: 1200px) {
+  .page-header {
+    padding: 0px;
+  }
+  
+  .top-leadership {
+    padding: 0 40px;
+  }
+  
+  .trustee-card {
+    height: auto;
+  }
+  
+  .members-section > h2,
+  .members-section .members-subtitle {
+    padding: 0 40px;
+  }
+  
+  .members-grid {
+    gap: 40px;
+    padding: 0 40px;
+  }
+}

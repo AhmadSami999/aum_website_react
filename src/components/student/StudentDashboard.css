@@ -1,0 +1,762 @@
+/* /src/components/student/StudentDashboard.css */
+/* ---------- Student Dashboard (page-scoped) ------------------------------ */
+
+/* ───────────── Layout Shell ───────────── */
+.student-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #fff;
+  margin: 0;
+}
+
+/* ───────────── Thin Top Bar ───────────── */
+.student-dashboard-container .thin-top-bar {
+  background: #fafafa;
+  padding: 0.5rem 5rem;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.student-dashboard-container .thin-bar-content .right-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.student-dashboard-container .thin-bar-content a,
+.student-dashboard-container .thin-bar-content .user-name,
+.student-dashboard-container .thin-bar-content .sign-out {
+  color: #000;
+  text-decoration: none;
+}
+
+.student-dashboard-container .thin-bar-content .user-name {
+  font-weight: 700;
+}
+
+.student-dashboard-container .thin-bar-content .sign-out {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #c62828;
+}
+
+/* ───────────── Logo / Heading Row ───────────── */
+.student-dashboard-container .header-logo-bar {
+  display: flex;
+  align-items: center;
+  padding: 1rem 5rem;
+}
+
+.student-dashboard-container .logo {
+  height: 50px;
+}
+
+.student-dashboard-container .my-aum-text {
+  margin-left: 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+/* ───────────── Horizontal Nav ───────────── */
+.student-dashboard-container .horizontal-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.student-dashboard-container .hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.student-dashboard-container .nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.student-dashboard-container .nav-link {
+  color: #000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s;
+  border-bottom: 10px solid transparent;
+}
+
+.student-dashboard-container .nav-link.active {
+  border-bottom-color: #ffcc00;
+}
+
+.student-dashboard-container .nav-link:hover {
+  background: #f8f8f8;
+}
+
+.student-dashboard-container .nav-icon {
+  font-size: 1.25rem;
+}
+
+/* User dropdown (desktop) */
+.student-dashboard-container .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.student-dashboard-container .user-dropdown-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size:16px;
+}
+
+.student-dashboard-container .user-dropdown-btn:hover {color:#c62828;}
+
+
+/* Enhanced User Dropdown Styling */
+.student-dashboard-container .user-dropdown {
+  position: absolute;
+  right: 5rem;
+  top: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  width: 400px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.student-dashboard-container .user-dropdown-header {
+  padding: 16px;
+  background: #f8f8f8;
+}
+
+.student-dashboard-container .user-dropdown-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.student-dashboard-container .user-dropdown-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.student-dashboard-container .info-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.student-dashboard-container .info-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.student-dashboard-container .info-value {
+  color: #333;
+}
+
+.student-dashboard-container .view-profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  margin-top: 12px;
+  background-color: #104b87;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: fit-content;
+  transition: background-color 0.2s;
+}
+
+.student-dashboard-container .view-profile-btn:hover {
+  background-color: #0d3d6e;
+}
+
+.student-dashboard-container .user-dropdown-separator {
+  height: 1px;
+  background-color: #ddd;
+  margin: 0;
+}
+
+.student-dashboard-container .user-dropdown-links {
+  padding: 8px 0;
+}
+
+.student-dashboard-container .dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.student-dashboard-container .dropdown-link:hover {
+  background-color: #f0f0f0;
+}
+
+.student-dashboard-container .dropdown-link-icon {
+  color: #104b87;
+  font-size: 1rem;
+}
+
+.student-dashboard-container .sign-out-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 10px 16px;
+  color: #c62828;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.student-dashboard-container .sign-out-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* ───────────── Quick-Links Row ───────────── */
+.student-dashboard-container .quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 10px 80px;
+}
+
+.student-dashboard-container .quick-link-btn {
+  padding: 0.3rem 0.6rem;
+  border-radius: 99px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  color: #333;
+  text-decoration: none;
+  font-weight: 400;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.student-dashboard-container .quick-link-btn:hover {
+  background: #e8e8e8;
+  border-color: #bbb;
+}
+
+/* ───────────── Two-Column Area ───────────── */
+.student-dashboard-container .two-columns {
+  display: flex;
+  gap: 2rem;
+}
+
+.student-dashboard-container .column-left  { flex: 0 0 60%; }
+.student-dashboard-container .column-right { flex: 0 0 40%; }
+
+.student-dashboard-container .column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;          /* gap between boxes (left col) */
+}
+
+/* ───────────── Base "Box" Style ───────────── */
+.student-dashboard-container .box {
+  background: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grey header for every box */
+.student-dashboard-container .box-titlebar {
+  background: #fafafa;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.student-dashboard-container .box-heading {
+  font-weight: 500;
+}
+
+/* Tabs */
+.student-dashboard-container .tabs {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.student-dashboard-container .tab-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-weight: 700;
+  cursor: pointer;
+
+}
+
+
+/* Box content & footer */
+.student-dashboard-container .box-content {
+  padding: 1rem;
+}
+
+.student-dashboard-container .box-footer {
+  background: #fafafa;
+  border-top: 1px solid #ccc;
+  padding: 0.6rem 1rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.student-dashboard-container .box-footer a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.student-dashboard-container .box-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ───────────── "My Classes" Row Styling ───────────── */
+.student-dashboard-container .class-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.student-dashboard-container .course-title { font-weight: 600; }
+.student-dashboard-container .course-prof  { color: #555; }
+
+/* ───────────── Agenda Bar Styling ───────────── */
+.student-dashboard-container .agenda-bar {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 0.6rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.student-dashboard-container .agenda-date-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.student-dashboard-container .agenda-nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.student-dashboard-container .agenda-date         { font-weight: 600; }
+.student-dashboard-container .agenda-range-select {
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+/* ───────────── Link Grid (Service Center) ───────────── */
+.student-dashboard-container .link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1rem;
+}
+
+.student-dashboard-container .service-link {
+  color: #104b87;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.student-dashboard-container .service-link:hover {
+  text-decoration: underline;
+}
+
+/* ───────────── Main Scroll Area ───────────── */
+.student-dashboard-container .student-main {
+  flex: 1;
+  padding: 0.5rem 5rem;
+  overflow-y: auto;
+  background: #fff;
+}
+
+/* ───────────── Right-Column Stack (Programs + Accordions) ───────────── */
+.student-dashboard-container .programs-and-resources {
+  display: flex;
+  flex-direction: column;
+  gap: 0;                /* NO gap between stacked boxes */
+}
+
+/* Remove top border between consecutive accordion boxes */
+.resource-box       { border-top: none; }
+.programs-and-resources .box:first-child { border-top: 1px solid #ccc; } /* keep top border on My Programs */
+
+/* Accordion header (button) */
+.resource-header {
+  width: 100%;
+  background: #fafafa;
+  border: none;
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  flex-direction: row;          /* keep chevron right of icon/label */
+}
+
+/* Icon + label */
+.resource-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.resource-icon {
+  font-size: 1.25rem;
+  color: #800000;   /* maroon */
+}
+
+/* ───────────── Responsive ≤ 768 px ───────────── */
+@media (max-width: 768px) {
+  /* Paddings shrink */
+  .student-dashboard-container .thin-top-bar,
+  .student-dashboard-container .header-logo-bar,
+  .student-dashboard-container .horizontal-nav,
+  .student-dashboard-container .student-main {
+    padding: 1rem;
+  }
+
+  /* Hamburger replaces nav-right dropdown */
+  .student-dashboard-container .hamburger-btn { display: block; }
+  .student-dashboard-container .nav-right     { display: none; }
+
+  /* Mobile nav dropdown */
+  .student-dashboard-container .horizontal-nav {
+    flex-direction: row;
+  }
+
+  .student-dashboard-container .nav-left {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    display: none;
+    z-index: 20;
+  }
+
+  .student-dashboard-container .horizontal-nav.mobile-open .nav-left {
+    display: flex;
+  }
+
+  .student-dashboard-container .nav-link {
+    padding: 0.75rem 1rem;
+    width: 100%;
+  }
+
+  /* Quick-links padding */
+  .student-dashboard-container .quick-links { padding: 10px 1rem; }
+
+  /* Columns stack */
+  .student-dashboard-container .two-columns   { flex-direction: column; }
+  .student-dashboard-container .column-left,
+  .student-dashboard-container .column-right { flex: 0 0 100%; }
+
+  /* Agenda bar stacks vertically */
+  .student-dashboard-container .agenda-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .student-dashboard-container .agenda-range-select {
+    align-self: flex-start;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive dropdown adjustments */
+  .student-dashboard-container .user-dropdown {
+    right: 1rem;
+    width: calc(100% - 2rem);
+    max-width: 300px;
+  }
+}
+
+.student-role-badge {text-transform:capitalize;}
+
+/* Footer button that toggles Grades & Transcripts */
+.student-dashboard-container .footer-toggle-btn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.student-dashboard-container .footer-toggle-btn:hover {
+  text-decoration: underline;
+}
+
+/* ─── My Agenda layout & controls ───────────────────────────── */
+.student-dashboard-container .agenda-header {
+  display: flex;
+  justify-content: space-between;      /* label on the left, range <select> on the right */
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.student-dashboard-container .agenda-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;                         /* space between arrows and date label */
+}
+
+.student-dashboard-container .nav-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.student-dashboard-container .nav-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.student-dashboard-container .agenda-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  min-width: 140px;
+  text-align: center;
+}
+
+.student-dashboard-container .agenda-header select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+.student-dashboard-container .agenda-body {
+  font-size: 0.9rem;
+  color: #666;
+}
+/* ---- Avatar in user dropdown ---- */
+.student-dashboard-container .user-dropdown-header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;   
+}
+
+.student-dashboard-container .user-avatar {
+  width: 72px;                 
+  height: 100px;
+  border-radius: 6px;          
+  object-fit: cover;
+}
+
+/* ---- Notification cards inside box-content ---- */
+.student-dashboard-container .notif-section h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.student-dashboard-container .notif-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  background: #fafafa;
+}
+
+.student-dashboard-container .notif-card.unread {
+  background: #fffbe6;   /* pale yellow highlights unread */
+}
+
+.student-dashboard-container .notif-header {
+  margin-bottom: 0.4rem;
+}
+
+.student-dashboard-container .notif-actions button {
+  background: #104b87;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.student-dashboard-container .notif-actions button:hover {
+  background: #0d3d6e;
+}
+
+.student-dashboard-container .column-right {
+
+  gap: 0rem;
+}
+
+.student-dashboard-container .column-right .box:not(:first-child) {
+  border-top: none;
+}
+
+/* Add these styles to your StudentDashboard.css file */
+
+/* ───────────── Footer Button Styling ───────────── */
+.student-dashboard-container .footer-toggle-btn {
+  background: none;
+  border: none;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.student-dashboard-container .footer-toggle-btn:hover {
+  text-decoration: underline;
+}
+
+/* ───────────── Modified Class Row Styling with Grades ───────────── */
+.student-dashboard-container .class-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.student-dashboard-container .course-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 280px;
+}
+
+.student-dashboard-container .course-grade {
+  font-weight: 700;
+  color: #104b87;
+  font-size: 1rem;
+  width: 35px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.student-dashboard-container .course-prof {
+  color: #555;
+  flex: 1;
+}
+
+.student-dashboard-container .course-prof {
+  color: #555;
+}
+
+/* ───────────── Academic Standing Section ───────────── */
+.student-dashboard-container .academic-standing {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+
+.student-dashboard-container .standing-info {
+  margin-bottom: 0.5rem;
+}
+
+.student-dashboard-container .academic-standing-label {
+  font-weight: 700;
+}
+
+.student-dashboard-container .gpa-info {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.student-dashboard-container .gpa-label {
+  font-weight: 700;
+}
+
+/* make sure tab-btn is positioned for the pseudo-element */
+.student-dashboard-container .tab-btn {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0px 10px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+
+}
+
+/* underline starts hidden (scaleX(0)) */
+.student-dashboard-container .tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;       /* move it down 1px to touch the 1px box-titlebar border */
+  z-index: 2;         /* ensure it sits above the border if needed */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #800000;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+/* on hover, grow the underline from the center outwards */
+.student-dashboard-container .tab-btn:hover::after {
+  transform: scaleX(1);
+}
+
+/* optional: keep the underline on the active tab */
+.student-dashboard-container .tab-btn.active::after {
+  transform: scaleX(1);
+}

@@ -1,0 +1,23 @@
+https://american-university-of-malta.onrender.com/signin
+
+student@email.com
+aum*28$&f4
+
+admin@email.com
+aum*28$&f4
+
+candidate@email.com
+r2ggah95ynA1!
+
+
+Important objects:
+
+account.account -> Map to ID, Name, i c
+op.course > course
+
+
+TEST
+-------
+- Forgot Password
+
+----

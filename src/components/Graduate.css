@@ -1,0 +1,255 @@
+/* /src/pages/Graduate.css */
+
+/* Root */
+.graduate-page {
+  width: 100%;
+  padding: 40px 20px;
+}
+
+/* -----------------------------------------------------------------------------
+   PAGE HEADER
+   -------------------------------------------------------------------------- */
+.graduate-page .page-header {
+  margin: 0 0 40px 0;
+  padding: 0 60px;
+}
+
+.graduate-page .page-header h1 {
+  font-size: 42px;
+  color: #104b87;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.graduate-page .page-header h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  border-bottom: 3px solid #d0112b;
+}
+
+/* -----------------------------------------------------------------------------
+   BLUE INTRO BOX  (two‑column hero with 12‑image grid)
+   -------------------------------------------------------------------------- */
+.graduate-page .blue-box {
+  background-color: #5c80a5;
+  color: #ffffff;
+  width: calc(100% - 120px);
+  padding: 0;
+  margin: 0 60px 60px 60px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.graduate-page .two-column-content {
+  display: flex;
+}
+
+.graduate-page .info-column {
+  flex: 1;
+  padding: 60px;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+.graduate-page .image-column {
+  flex: 1;
+  padding: 40px;
+  min-height: 300px;
+  box-sizing: border-box;
+}
+
+/* Intro image grid */
+.graduate-page .intro-images-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px;
+  gap: 10px;
+}
+
+.graduate-page .intro-images-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  display: block;
+  border-radius: 3px;
+}
+
+/* -----------------------------------------------------------------------------
+   STUDENT VISA SECTION
+   -------------------------------------------------------------------------- */
+.graduate-page .visa-section {
+  margin-bottom: 60px;
+  padding: 0 60px;
+}
+
+.graduate-page .visa-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #104b87;
+}
+
+.graduate-page .visa-section .blue-box {
+  margin: 0;
+  width: 100%;
+}
+
+.graduate-page .visa-box .image-column {
+  padding: 0;
+}
+
+.graduate-page .visa-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -----------------------------------------------------------------------------
+   PROGRAMS GRID SECTION
+   -------------------------------------------------------------------------- */
+.graduate-page .programs-listing-section {
+  margin-bottom: 60px;
+  padding: 0 60px;
+}
+
+.graduate-page .programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* -----------------------------------------------------------------------------
+   PROGRAM CARD
+   -------------------------------------------------------------------------- */
+.graduate-page .program-card {
+  display: flex;
+  background: #f1f1f1;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.graduate-page .program-card:hover {
+  transform: translateY(-5px);
+}
+
+.graduate-page .program-image {
+  flex: 0 0 45%;
+  max-width: 45%;
+  overflow: hidden;
+}
+.graduate-page .program-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.graduate-page .program-info {
+  flex: 1;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.graduate-page .program-info h3 {
+  font-size: 22px;
+  color: #104b87;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+.graduate-page .program-info p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* -----------------------------------------------------------------------------
+   BUTTONS
+   -------------------------------------------------------------------------- */
+/* Read‑more button */
+.graduate-page .read-more-btn {
+  background-color: #5c80a5;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.graduate-page .read-more-btn:hover {
+  background-color: #486a84;
+}
+
+/* CTA button (visa section) */
+.graduate-page .cta-btn {
+  background-color: #d0112b;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.graduate-page .cta-btn:hover {
+  background-color: #a80d23;
+}
+
+/* -----------------------------------------------------------------------------
+   RESPONSIVE TWEAKS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .graduate-page .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .graduate-page .intro-images-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .graduate-page .two-column-content {
+    flex-direction: column;
+  }
+  .graduate-page .image-column {
+    padding: 30px;
+  }
+  .graduate-page .program-card {
+    flex-direction: column;
+  }
+  .graduate-page .program-image,
+  .graduate-page .visa-box .image-column {
+    max-width: none;
+    width: 100%;
+    padding: 0 0 30px;
+  }
+  .graduate-page .program-info {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .graduate-page .programs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .graduate-page .intro-images-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .graduate-page .page-header h1 {
+    font-size: 30px;
+  }
+  .graduate-page .visa-section h2 {
+    font-size: 24px;
+  }
+}

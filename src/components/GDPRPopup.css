@@ -1,0 +1,63 @@
+/* /src/components/GDPRPopup.css */
+.gdpr-popup-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+  }
+  
+  .gdpr-popup {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+  }
+  
+  .gdpr-popup h3 {
+    margin-top: 0;
+    color: #104b87;
+  }
+  
+  .gdpr-popup p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+  }
+  
+  .gdpr-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .btn-accept,
+  .btn-reject {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-accept {
+    background-color: #5c80a5;
+    color: #fff;
+  }
+  
+  .btn-accept:hover {
+    background-color: #537395;
+  }
+  
+  .btn-reject {
+    background-color: #eee;
+    color: #333;
+  }
+  
+  .btn-reject:hover {
+    background-color: #ddd;
+  }
+  

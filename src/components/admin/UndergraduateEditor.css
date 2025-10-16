@@ -1,0 +1,276 @@
+/* UndergraduateEditor.css */
+.undergraduate-editor {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.undergraduate-editor h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.message {
+  padding: 12px 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.message.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.message.error {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.editor-form {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #455a64;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group input[type="file"] {
+  border: 1px dashed #ddd;
+  padding: 15px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.current-image {
+  margin-bottom: 15px;
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.current-image img {
+  max-width: 100%;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.current-image p {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #777;
+}
+
+.form-buttons {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.form-buttons button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-buttons button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.form-buttons button:first-of-type {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.form-buttons button:first-of-type:hover {
+  background-color: #219653;
+}
+
+.cancel-btn {
+  background-color: #c62828;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background-color: #a51c1c;
+}
+
+.programs-list {
+  margin-top: 30px;
+}
+
+.programs-list h3 {
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+.programs-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.program-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.program-item-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.program-item-content img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.program-item-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.program-item-actions .edit-btn {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.program-item-actions .edit-btn:hover {
+  background-color: #2980b9;
+}
+
+.program-item-actions .delete-btn {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.program-item-actions .delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* ========  PROGRAM‑STRUCTURE TABLE STYLING  ======== */
+.structure-editor-wrapper {
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.structure-editor-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px; /* prevent cramped columns */
+}
+
+.structure-editor-table th,
+.structure-editor-table td {
+  border: 1px solid #e0e0e0;
+  padding: 10px 12px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.structure-editor-table th {
+  background-color: #f0f3f5;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.structure-editor-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.structure-editor-table input,
+.structure-editor-table select {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.add-row-btn,
+.delete-row-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-row-btn {
+  margin-top: 10px;
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.add-row-btn:hover {
+  background-color: #219653;
+}
+
+.delete-row-btn {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.delete-row-btn:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .undergraduate-editor {
+    padding: 15px;
+  }
+}

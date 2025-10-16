@@ -1,0 +1,481 @@
+/* Global rule to ensure consistent box-sizing */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* HERO SECTION - FULL WIDTH */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 900px; /* Adjust as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .hero-overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-text-inner {
+    width: 100%;
+    padding: 0 20px; /* Adjust padding as needed */
+    text-align: left;
+  }
+  
+  .hero-text-inner h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: white;
+  }
+  
+  .hero-text-inner p {
+    font-size: 32px;
+    font-weight: 300;
+    margin: 0;
+    color: white;
+  }
+  
+  /* FULL-WIDTH INFO SECTION */
+  .info-section {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0; /* No extra margin if not needed */
+  }
+  
+  .info-left {
+    width: 20%;
+    background-color: #5c80a5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Hover effect for the blue arrow box */
+  .info-left:hover {
+    background-color: #537395; /* Slightly darker shade */
+    cursor: pointer;
+  }
+  
+  .info-left .down-arrow {
+    height: 140px; /* Adjust as needed */
+    width: auto;
+  }
+  
+  .info-right {
+    width: 80%;
+    padding: 50px;
+  }
+  
+  .info-right h2 {
+    margin-top: 0;
+    font-size: 54px;
+  }
+  
+  .greeting {
+    color: grey;
+    font-weight: normal;
+  }
+  
+  .uni-name {
+    color: #104b87;
+  }
+  
+  .body-text {
+    color: grey;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  /* 2-COLUMN ICON SECTION */
+  .icon-section {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    max-height: 1000px;
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .icons-column {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .icon-wrapper {
+    position: relative;
+    margin: 10px 0; /* Spacing between icons */
+    text-align: center;
+  }
+  
+  .icon-wrapper img {
+    display: block;
+    margin: 0 auto; /* Center align horizontally */
+    width: auto;
+    height: auto;
+    max-width: none;
+  }
+  
+  .icon-wrapper .hover {
+    display: none;
+  }
+  
+  .icon-wrapper:hover .default {
+    display: none;
+  }
+  
+  .icon-wrapper:hover .hover {
+    display: block;
+  }
+  
+  .image-column {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .image-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Icon label and red divider */
+  .icon-label {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #999997;
+    font-weight: 600;
+  }
+  
+  .red-divider {
+    border: none;
+    border-top: 2px solid #d0112b;
+    width: 50px; /* Adjust width as needed */
+    margin: 0 auto;
+  }
+  
+  /* Upcoming Events Section */
+  .upcoming-events {
+    padding: 50px;
+    background-color: #fff; /* Light background for contrast */
+  }
+  
+  .upcoming-events .section-title {
+    text-align: left;
+    font-size: 42px;
+    color: grey;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+  
+  .events-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .event-card {
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .event-image {
+    width: 100%;
+    height: 200px; /* Set a fixed height or adjust as needed */
+    overflow: hidden;
+  }
+  
+  .event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius:24px;
+  }
+  
+  .event-image:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Event detail styles */
+  .event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .event-title {
+    font-size: 28px;
+    color: #104b87;
+    margin: 0;
+     display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+  
+  .event-excerpt {
+    font-size: 18px;
+    color: #666;
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+  
+  /* Event buttons */
+  .event-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .event-buttons button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .more-info {
+    background-color: transparent;
+    border: 2px solid #104b87;
+    color: #104b87;
+  }
+  
+  .register-now {
+    background-color: #5c80a5;
+    color: white;
+    border: none;
+    border-radius: 24px;
+  }
+  
+  /* Latest News Section */
+  .latest-news {
+    padding: 50px;
+    background-color: #fff;
+  }
+  
+  .latest-news .section-title {
+    text-align: left;
+    font-size: 42px;
+    color: grey;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+  
+  .news-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .news-card {
+    background: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius:24px;
+  }
+  
+  .news-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .news-title {
+    font-size: 28px;
+    color: #104b87;
+    margin: 0;
+    padding-bottom: 10px;
+    position: relative;
+  }
+  
+  .news-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    border-bottom: 2px solid #d0112b;
+  }
+  
+  .news-excerpt {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .read-more {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #5c80a5;
+    color: #fff;
+  }
+  
+  /* Section footer */
+  .section-footer {
+    text-align: right;
+    margin-top: 20px;
+    padding-right: 20px;
+  }
+  
+  .show-more {
+    color: #104b87;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .section-divider {
+    border: none;
+    border-top: 2px solid #d0112b;
+    margin-top: 20px;
+  }
+  
+  /* RESPONSIVE STYLES */
+  
+  /* For screens up to 1600px: two columns for events and news */
+  @media (max-width: 1600px) {
+    .events-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .news-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* For screens up to 1200px: stack info and icon sections */
+  @media (max-width: 1200px) {
+    .info-section {
+      flex-direction: column;
+    }
+    .info-left,
+    .info-right {
+      width: 100%;
+      text-align: center;
+    }
+    .info-right {
+      padding: 20px;
+    }
+    .icon-section {
+      flex-direction: column;
+    }
+    .icons-column,
+    .image-column {
+      width: 100%;
+    }
+    .icons-column {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+    .icon-wrapper {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .events-container, .news-container {
+      grid-template-columns: 1fr;
+    }
+    .hero-text-inner h1 {
+      font-size: 48px;
+    }
+    .hero-text-inner p {
+      font-size: 24px;
+    }
+    .info-right h2 {
+      font-size: 36px;
+    }
+    .body-text {
+      font-size: 16px;
+    }
+    .event-title {
+      font-size: 22px;
+    }
+    .event-excerpt {
+      font-size: 16px;
+    }
+  }
+  
+  /* For screens up to 767px: adjustments for smaller mobile devices */
+  @media (max-width: 767px) {
+    .icons-column {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 15px;
+    }
+    .icon-label {
+      font-size: 16px;
+    }
+    .hero {
+      height: 600px;
+    }
+    .hero-text-inner h1 {
+      font-size: 36px;
+    }
+    .hero-text-inner p {
+      font-size: 20px;
+    }
+    .upcoming-events,
+    .latest-news {
+      padding: 30px 15px;
+    }
+    .section-title {
+      font-size: 32px;
+    }
+  }
+  
+
+  .home-page .days-away {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border: 1px solid #000;
+    border-radius: 9999px;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 8px;
+  
+    /* make it only as wide as its contents */
+    width: max-content;
+    white-space: nowrap;
+  
+    /* if its parent is flex, keep it at start */
+    align-self: flex-start;
+  }

@@ -1,0 +1,18 @@
+rules_version = '2';
+
+// Craft rules based on data in your Firestore database
+// allow write: if firestore.get(resource.newData.resource.name).data.owner == request.auth.uid;
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Images for rich text editor - allow authenticated users to read/write
+    match /rich-text-images/{imageId} {
+      allow read: if true; // Anyone can read the images
+      allow write: if request.auth != null; // Only authenticated users can upload
+    }
+    
+    // Allow authenticated users to read/write their own files
+    match /{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}

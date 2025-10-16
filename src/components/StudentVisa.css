@@ -1,0 +1,568 @@
+/* STUDENT VISA PAGE — styled to match Malta page styling */
+.visa-page {
+  margin: 0 auto;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- HERO BANNER ---------- */
+.visa-page .hero-banner {
+  position: relative;
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.visa-page .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(16, 75, 135, 0.7) 0%, rgba(92, 128, 165, 0.6) 100%);
+}
+
+.visa-page .hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.visa-page .hero-text {
+  width: 100%;
+  text-align: center;
+}
+
+.visa-page .program-title-box {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 25px 20px;
+  color: white;
+  font-size: 42px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ---------- VISA CHECK BANNER ---------- */
+.visa-page .visa-check-banner {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f0f7ff;
+  border-radius: 0.75rem;
+  border: 2px solid #3b82f6;
+}
+
+.visa-page .visa-check-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 1.125rem;
+}
+
+.visa-page .visa-check-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+/* ---------- REQUIREMENTS SECTION ---------- */
+.visa-page .requirements-section {
+  position: relative;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 80px 0;
+}
+
+.visa-page .requirements-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(16, 75, 135, 0.8) 0%, rgba(92, 128, 165, 0.7) 100%);
+}
+
+.visa-page .requirements-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.visa-page .requirements-inner {
+  text-align: center;
+}
+
+.visa-page .requirements-inner h2 {
+  font-size: 48px;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.visa-page .requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 50px;
+}
+
+.visa-page .requirement-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  text-align: left;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  color: #333;
+}
+
+.visa-page .requirement-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  border-color: #60a5fa;
+  background: rgba(255, 255, 255, 1);
+}
+
+.visa-page .requirement-icon {
+  width: 4rem;
+  height: 4rem;
+  background: #3b82f6;
+  border-radius: 50%;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.visa-page .requirement-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.visa-page .requirement-card h3 {
+  color: #1e40af;
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.visa-page .requirement-card p {
+  color: #4b5563;
+  line-height: 1.625;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  text-shadow: none;
+}
+
+.visa-page .requirement-card ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  color: #4b5563;
+}
+
+.visa-page .requirement-card li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.visa-page .insurance-details {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.visa-page .insurance-details p {
+  margin: 0.25rem 0;
+  font-size: 14px;
+}
+
+.visa-page .insurance-details strong {
+  color: #1e40af;
+}
+
+/* ---------- BOX SECTIONS ---------- */
+.visa-page .box-section {
+  position: relative;
+}
+
+.visa-page .section-inner {
+  margin: 0 60px;
+  padding: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.visa-page .section-white .section-inner {
+  background: #fff;
+}
+
+.visa-page .section-grey .section-inner {
+  background: #f7f7f7;
+}
+
+/* Decorative triangles */
+.visa-page .section-white::before,
+.visa-page .section-white::after,
+.visa-page .section-grey::before,
+.visa-page .section-grey::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 20px;
+  width: 60px;
+  z-index: 0;
+}
+
+.visa-page .section-white::before,
+.visa-page .section-grey::before {
+  left: 60px;
+  transform: translateX(-100%);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.visa-page .section-white::after,
+.visa-page .section-grey::after {
+  right: 60px;
+  transform: translateX(100%);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.visa-page .section-white::before,
+.visa-page .section-white::after {
+  background: #f7f7f7;
+}
+
+.visa-page .section-grey::before,
+.visa-page .section-grey::after {
+  background: #f7f7f7;
+}
+
+/* Two-column layout */
+.visa-page .two-column-box {
+  display: flex;
+  align-items: flex-start;
+}
+
+.visa-page .box-heading {
+  width: 30%;
+  padding-right: 20px;
+}
+
+.visa-page .box-heading h2 {
+  margin: 0;
+  font-size: 27px;
+  color: #104b87;
+  line-height: 34px;
+}
+
+.visa-page .box-content {
+  width: 70%;
+}
+
+.visa-page .box-content > *:first-child {
+  margin-top: 0;
+}
+
+.visa-page .box-content h3 {
+  color: #1e40af;
+  margin: 2rem 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* ---------- NOTE BOX ---------- */
+.visa-page .note-box {
+  background: #fef3c7;
+  border: 2px solid #f59e0b;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.visa-page .note-box p {
+  margin: 0;
+  color: #92400e;
+  font-weight: 500;
+}
+
+/* ---------- TRP LINKS ---------- */
+.visa-page .trp-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.visa-page .trp-link {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #f0f7ff;
+  border: 2px solid #3b82f6;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #1e40af;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.visa-page .trp-link:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  text-decoration: none;
+}
+
+.visa-page .trp-link svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.75rem;
+}
+
+/* ---------- CONTACT CARDS ---------- */
+.visa-page .contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.visa-page .contact-card {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #3b82f6;
+  text-align: center;
+}
+
+.visa-page .contact-card h4 {
+  color: #1e40af;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.visa-page .contact-title {
+  color: #4b5563;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ---------- CONTACT INFO ---------- */
+.visa-page .contact-info {
+  background: #f0f7ff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.visa-page .contact-method {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+.visa-page .contact-method:last-child {
+  margin-bottom: 0;
+}
+
+.visa-page .contact-method strong {
+  color: #1e40af;
+  margin-right: 0.5rem;
+}
+
+.visa-page .contact-method a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.visa-page .contact-method a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- CONTACT BANNER ---------- */
+.visa-page .contact-banner {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.visa-page .contact-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+  background: white;
+}
+
+.visa-page .contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  text-decoration: none;
+}
+
+.visa-page .contact-btn.primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.visa-page .contact-btn.primary:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+/* Links */
+.visa-page a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.visa-page a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .visa-page .hero-banner {
+    background-attachment: scroll;
+    min-height: 50vh;
+  }
+
+  .visa-page .hero-content {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  
+  .visa-page .hero-text {
+    width: 100%;
+  }
+  
+  .visa-page .program-title-box {
+    font-size: 28px;
+    padding: 20px 15px;
+  }
+
+  .visa-page .section-inner {
+    margin: 0 20px;
+    padding: 25px;
+  }
+  
+  .visa-page .two-column-box {
+    flex-direction: column;
+  }
+  
+  .visa-page .box-heading,
+  .visa-page .box-content {
+    width: 100%;
+  }
+
+  .visa-page .box-heading {
+    margin-bottom: 20px;
+    padding-right: 0;
+  }
+
+  /* Mobile Requirements Section */
+  .visa-page .requirements-section {
+    background-attachment: scroll;
+    min-height: 60vh;
+    padding: 60px 0;
+  }
+
+  .visa-page .requirements-content {
+    padding: 0 20px;
+  }
+
+  .visa-page .requirements-inner h2 {
+    font-size: 32px;
+  }
+
+  .visa-page .requirements-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 40px;
+  }
+
+  .visa-page .requirement-card {
+    padding: 1.5rem;
+  }
+
+  /* Mobile Contact Cards */
+  .visa-page .contact-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Mobile TRP Links */
+  .visa-page .trp-links {
+    flex-direction: column;
+  }
+
+  .visa-page .trp-link {
+    min-width: auto;
+    text-align: center;
+  }
+
+  /* Mobile Contact Banner */
+  .visa-page .contact-banner {
+    padding: 1.5rem;
+  }
+
+  .visa-page .contact-btn {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  /* Mobile Visa Check Banner */
+  .visa-page .visa-check-banner {
+    padding: 1rem;
+  }
+
+  .visa-page .visa-check-btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
