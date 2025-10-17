@@ -98,7 +98,7 @@ function Navbar() {
           title: 'Business Programs',
           order: 1,
           items: [
-            { title: 'All Undergraduate Programs', url: '/undergraduate', isExternal: false },
+   //         { title: 'All Undergraduate Programs', url: '/undergraduate', isExternal: false },
             { title: 'Business Administration', url: '/program/business-admin', isExternal: false },
             { title: 'Marketing', url: '/program/marketing', isExternal: false }
           ]
@@ -136,7 +136,7 @@ function Navbar() {
           title: 'Master\'s Programs',
           order: 1,
           items: [
-            { title: 'All Graduate Programs', url: '/graduate', isExternal: false },
+       //     { title: 'All Graduate Programs', url: '/graduate', isExternal: false },
             { title: 'MBA', url: '/program/mba', isExternal: false }
           ]
         },
