@@ -25,12 +25,12 @@ function Navbar() {
     async function loadNavbarConfig() {
       try {
         console.log('Loading navbar config from Firestore...');
-        
+
         // UPDATED: Load from the same Firestore location as NavbarEditor saves to
         const docRef = doc(db, 'navbar', 'config');
         const docSnap = await getDoc(docRef);
 
-if (docSnap.exists()) {
+        if (docSnap.exists()) {
           console.log('🗑️ TEMPORARY: Clearing old navbar config with undergraduate/graduate items...');
           await deleteDoc(docRef);
           console.log('✅ Old navbar config cleared. Using updated defaults.');
@@ -45,12 +45,12 @@ if (docSnap.exists()) {
           const visibleItems = (config.items || getDefaultNavItems())
             .filter(item => item.visible)
             .sort((a, b) => {
-                const orderA = a.order ?? 999;
-                const orderB = b.order ?? 999;
-                if (a.id === 'undergraduate') return -1;
-                if (b.id === 'undergraduate') return 1;
-                return orderA - orderB;
-              });
+              const orderA = a.order ?? 999;
+              const orderB = b.order ?? 999;
+              if (a.id === 'undergraduate') return -1;
+              if (b.id === 'undergraduate') return 1;
+              return orderA - orderB;
+            });
           console.log('Processed navbar items:', visibleItems);
           setNavbarItems(visibleItems);
         } else {
@@ -82,11 +82,11 @@ if (docSnap.exists()) {
     function handleResize() {
       const newIsMobile = window.innerWidth <= 768;
       const newIsTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
-      
+
       // FIXED: Clear all active states when switching between desktop/tablet/mobile
       setIsMobile(newIsMobile);
       setIsTablet(newIsTablet);
-      
+
       // Force close mobile menu and clear dropdowns on resize
       setMobileMenuOpen(false);
       setActiveDropdown(null);
@@ -101,69 +101,69 @@ if (docSnap.exists()) {
 
   // UPDATED: Default navbar items (same as in NavbarEditor for consistency)
   const getDefaultNavItems = () => [
-  {
-    id: 'undergraduate',
-    title: 'Undergraduate',
-    type: 'megamenu',
-    visible: true,
-    order: 1,
-    megaMenuColumns: [
-      {
-        id: 'col-1',
-        title: 'Business Programs',
-        order: 1,
-        items: [
-          { title: 'Business Administration', url: '/program/business-admin', isExternal: false },
-          { title: 'Marketing', url: '/program/marketing', isExternal: false }
-        ]
-      },
-      {
-        id: 'col-2',
-        title: 'Technology Programs',
-        order: 2,
-        items: [
-          { title: 'Computer Science', url: '/program/computer-science', isExternal: false },
-          { title: 'Information Technology', url: '/program/it', isExternal: false }
-        ]
-      },
-      {
-        id: 'col-3',
-        title: 'Resources',
-        order: 3,
-        items: [
-          { title: 'Academic Calendar', url: '/academic-calendar', isExternal: false },
-          { title: 'Course Catalog', url: '/catalog', isExternal: false },
-          { title: 'Admissions Info', url: '/admissions', isExternal: false }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'graduate',
-    title: 'Graduate',
-    type: 'megamenu',
-    visible: true,
-    order: 2,
-    megaMenuColumns: [
-      {
-        id: 'grad-col-1',
-        title: "Master's Programs",
-        order: 1,
-        items: [
-          { title: 'MBA', url: '/program/mba', isExternal: false }
-        ]
-      },
-      {
-        id: 'grad-col-2',
-        title: 'Resources',
-        order: 2,
-        items: [
-          { title: 'Graduate Admissions', url: '/graduate-admissions', isExternal: false },
-          { title: 'Research Opportunities', url: '/research', isExternal: false }
-        ]
-      }
-    ]
-  },
+    {
+      id: 'undergraduate',
+      title: 'Undergraduate',
+      type: 'megamenu',
+      visible: true,
+      order: 1,
+      megaMenuColumns: [
+        {
+          id: 'col-1',
+          title: 'Business Programs',
+          order: 1,
+          items: [
+            { title: 'Business Administration', url: '/program/business-admin', isExternal: false },
+            { title: 'Marketing', url: '/program/marketing', isExternal: false }
+          ]
+        },
+        {
+          id: 'col-2',
+          title: 'Technology Programs',
+          order: 2,
+          items: [
+            { title: 'Computer Science', url: '/program/computer-science', isExternal: false },
+            { title: 'Information Technology', url: '/program/it', isExternal: false }
+          ]
+        },
+        {
+          id: 'col-3',
+          title: 'Resources',
+          order: 3,
+          items: [
+            { title: 'Academic Calendar', url: '/academic-calendar', isExternal: false },
+            { title: 'Course Catalog', url: '/catalog', isExternal: false },
+            { title: 'Admissions Info', url: '/admissions', isExternal: false }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'graduate',
+      title: 'Graduate',
+      type: 'megamenu',
+      visible: true,
+      order: 2,
+      megaMenuColumns: [
+        {
+          id: 'grad-col-1',
+          title: "Master's Programs",
+          order: 1,
+          items: [
+            { title: 'MBA', url: '/program/mba', isExternal: false }
+          ]
+        },
+        {
+          id: 'grad-col-2',
+          title: 'Resources',
+          order: 2,
+          items: [
+            { title: 'Graduate Admissions', url: '/graduate-admissions', isExternal: false },
+            { title: 'Research Opportunities', url: '/research', isExternal: false }
+          ]
+        }
+      ]
+    },
     {
       id: 'about',
       title: 'About',
@@ -229,7 +229,7 @@ if (docSnap.exists()) {
         setMobileMenuOpen(false);
         setActiveDropdown(null);
       }
-      
+
       // Close dropdown if clicking outside nav items
       if (!e.target.closest('.nav-item') && !e.target.closest('.mobile-dropdown-container')) {
         setActiveDropdown(null);
@@ -255,18 +255,18 @@ if (docSnap.exists()) {
   const toggleDropdown = (itemId, e) => {
     e.preventDefault();
     e.stopPropagation();
-    
+
     // On mobile/tablet, allow dropdown toggle only if mobile menu is open
     if ((isMobile || isTablet) && !mobileMenuOpen) {
       return;
     }
-    
+
     setActiveDropdown(activeDropdown === itemId ? null : itemId);
   };
 
   const renderNavItem = (item, context = 'desktop') => {
     const key = `${context}-${item.id}`;
-    
+
     // Handle mega menus
     if (item.type === 'megamenu') {
       return (
@@ -281,8 +281,8 @@ if (docSnap.exists()) {
             {item.title}
             <span className={`dropdown-icon ${activeDropdown === key ? 'open' : ''}`}></span>
           </a>
-          
-          <div 
+
+          <div
             className={`mega-menu-content ${activeDropdown === key ? 'show' : ''}`}
             onMouseEnter={() => !isMobile && !isTablet && setActiveDropdown(key)}
             onMouseLeave={() => !isMobile && !isTablet && setActiveDropdown(null)}
@@ -291,47 +291,47 @@ if (docSnap.exists()) {
               {item.megaMenuColumns && item.megaMenuColumns
                 .sort((a, b) => a.order - b.order)
                 .map((column) => (
-                <div key={column.id} className="mega-menu-column">
-                  {column.title && (
-                    <h4 className="mega-menu-column-title">{column.title}</h4>
-                  )}
-                  <ul className="mega-menu-links">
-                    {column.items && column.items.map((columnItem, itemIndex) => (
-                      <li key={itemIndex}>
-                        {columnItem.isExternal ? (
-                          <a 
-                            href={columnItem.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            onClick={() => {
-                              setActiveDropdown(null);
-                              closeMobileMenu();
-                            }}
-                          >
-                            {columnItem.title}
-                          </a>
-                        ) : (
-                          <Link 
-                            to={columnItem.url} 
-                            onClick={() => {
-                              setActiveDropdown(null);
-                              closeMobileMenu();
-                            }}
-                          >
-                            {columnItem.title}
-                          </Link>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+                  <div key={column.id} className="mega-menu-column">
+                    {column.title && (
+                      <h4 className="mega-menu-column-title">{column.title}</h4>
+                    )}
+                    <ul className="mega-menu-links">
+                      {column.items && column.items.map((columnItem, itemIndex) => (
+                        <li key={itemIndex}>
+                          {columnItem.isExternal ? (
+                            <a
+                              href={columnItem.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={() => {
+                                setActiveDropdown(null);
+                                closeMobileMenu();
+                              }}
+                            >
+                              {columnItem.title}
+                            </a>
+                          ) : (
+                            <Link
+                              to={columnItem.url}
+                              onClick={() => {
+                                setActiveDropdown(null);
+                                closeMobileMenu();
+                              }}
+                            >
+                              {columnItem.title}
+                            </Link>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
             </div>
           </div>
         </div>
       );
     }
-    
+
     // Handle regular dropdowns (for backward compatibility)
     if (item.type === 'dropdown') {
       return (
@@ -346,8 +346,8 @@ if (docSnap.exists()) {
             {item.title}
             <span className={`dropdown-icon ${activeDropdown === key ? 'open' : ''}`}></span>
           </a>
-          
-          <div 
+
+          <div
             className={`dropdown-content ${activeDropdown === key ? 'show' : ''}`}
             onMouseEnter={() => !isMobile && !isTablet && setActiveDropdown(key)}
             onMouseLeave={() => !isMobile && !isTablet && setActiveDropdown(null)}
@@ -356,9 +356,9 @@ if (docSnap.exists()) {
               {item.dropdownItems && item.dropdownItems.map((dropdownItem, index) => (
                 <li key={index}>
                   {dropdownItem.isExternal ? (
-                    <a 
-                      href={dropdownItem.url} 
-                      target="_blank" 
+                    <a
+                      href={dropdownItem.url}
+                      target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => {
                         setActiveDropdown(null);
@@ -368,8 +368,8 @@ if (docSnap.exists()) {
                       {dropdownItem.title}
                     </a>
                   ) : (
-                    <Link 
-                      to={dropdownItem.url} 
+                    <Link
+                      to={dropdownItem.url}
                       onClick={() => {
                         setActiveDropdown(null);
                         closeMobileMenu();
@@ -391,18 +391,18 @@ if (docSnap.exists()) {
       return (
         <div key={key} className="nav-item apply-button">
           {item.isExternal ? (
-            <a 
-              href={item.url} 
+            <a
+              href={item.url}
               className="apply-btn"
-              target="_blank" 
+              target="_blank"
               rel="noopener noreferrer"
               onClick={() => closeMobileMenu()}
             >
               {item.title}
             </a>
           ) : (
-            <Link 
-              to={item.url} 
+            <Link
+              to={item.url}
               className="apply-btn"
               onClick={() => closeMobileMenu()}
             >
@@ -417,18 +417,18 @@ if (docSnap.exists()) {
     return (
       <div key={key} className="nav-item">
         {item.isExternal ? (
-          <a 
-            href={item.url} 
+          <a
+            href={item.url}
             className="nav-link"
-            target="_blank" 
+            target="_blank"
             rel="noopener noreferrer"
             onClick={() => closeMobileMenu()}
           >
             {item.title}
           </a>
         ) : (
-          <Link 
-            to={item.url} 
+          <Link
+            to={item.url}
             className="nav-link"
             onClick={() => closeMobileMenu()}
           >
@@ -475,7 +475,7 @@ if (docSnap.exists()) {
           <marquee>{tickerText}</marquee>
         </div>
       )}
-      
+
       <nav className="navbar">
         <div className="navbar-container">
           <div className="navbar-left">
@@ -495,12 +495,12 @@ if (docSnap.exists()) {
                 </Link>
               </div>
             )}
-            
+
             {(isMobile || isTablet) && <UserStatus />}
-            
+
             <div className="mobile-hamburger">
-              <button 
-                className={`menu-icon ${mobileMenuOpen ? 'close-icon' : ''}`} 
+              <button
+                className={`menu-icon ${mobileMenuOpen ? 'close-icon' : ''}`}
                 onClick={toggleMobileMenu}
                 type="button"
                 aria-label="Toggle navigation menu"
