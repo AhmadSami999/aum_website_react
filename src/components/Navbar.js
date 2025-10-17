@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { doc, getDoc, deleteDoc  } from 'firebase/firestore';
+import { doc, getDoc} from 'firebase/firestore';
 import { db } from '../firebase/config';
 import './Navbar.css';
 import logo from '../assets/logo.webp';
@@ -26,18 +26,8 @@ function Navbar() {
       try {
         console.log('Loading navbar config from Firestore...');
 
-        // UPDATED: Load from the same Firestore location as NavbarEditor saves to
         const docRef = doc(db, 'navbar', 'config');
         const docSnap = await getDoc(docRef);
-
-        if (docSnap.exists()) {
-          console.log('🗑️ TEMPORARY: Clearing old navbar config with undergraduate/graduate items...');
-          await deleteDoc(docRef);
-          console.log('✅ Old navbar config cleared. Using updated defaults.');
-          setNavbarItems(getDefaultNavItems());
-          setLoading(false);
-          return;
-        }
 
         if (docSnap.exists()) {
           console.log('Navbar config loaded from Firestore:', docSnap.data());
