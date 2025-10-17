@@ -602,7 +602,7 @@ function EnglishLanguageProgram() {
           <p style={styles.advisorP}>Please contact our advisor for guidance about the English Language Program.</p>
 
           <a 
-            href="https://aum.edu.mt/programs/english-language-program/" 
+            href="https://apply.aum.edu.mt/s/"
             style={styles.applyBtn}
             target="_blank" 
             rel="noopener noreferrer"
@@ -616,70 +616,7 @@ function EnglishLanguageProgram() {
             If you have any queries about the English Language Program, kindly fill in the form below and we will
             get back to you as soon as possible.
           </p>
-          <p style={styles.advisorP}>
-            You can also chat with us, using our chat box.
-          </p>
 
-          <div style={styles.contactForm}>
-            <div style={styles.contactLeft}>
-              <input
-                type="text"
-                name="firstName"
-                placeholder="First Name"
-                value={formData.firstName}
-                onChange={handleChange}
-                required
-                style={styles.input}
-              />
-              <input
-                type="text"
-                name="lastName"
-                placeholder="Last Name"
-                value={formData.lastName}
-                onChange={handleChange}
-                required
-                style={styles.input}
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                style={styles.input}
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone"
-                value={formData.phone}
-                onChange={handleChange}
-                style={{...styles.input, marginBottom: 0}}
-              />
-            </div>
-
-            <div style={styles.contactRight}>
-              <textarea
-                name="message"
-                placeholder="Message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                style={styles.textarea}
-              />
-              
-              <button 
-                type="submit" 
-                onClick={handleSubmit}
-                style={styles.sendBtn}
-                onMouseOver={(e) => e.target.style.backgroundColor = '#fcbf0b'}
-                onMouseOut={(e) => e.target.style.backgroundColor = '#5c80a5'}
-              >
-                Send
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </div>
