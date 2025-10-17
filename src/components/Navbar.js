@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, deleteDoc  } from 'firebase/firestore';
 import { db } from '../firebase/config';
 import './Navbar.css';
 import logo from '../assets/logo.webp';
@@ -29,7 +29,16 @@ function Navbar() {
         // UPDATED: Load from the same Firestore location as NavbarEditor saves to
         const docRef = doc(db, 'navbar', 'config');
         const docSnap = await getDoc(docRef);
-        
+
+if (docSnap.exists()) {
+          console.log('🗑️ TEMPORARY: Clearing old navbar config with undergraduate/graduate items...');
+          await deleteDoc(docRef);
+          console.log('✅ Old navbar config cleared. Using updated defaults.');
+          setNavbarItems(getDefaultNavItems());
+          setLoading(false);
+          return;
+        }
+
         if (docSnap.exists()) {
           console.log('Navbar config loaded from Firestore:', docSnap.data());
           const config = docSnap.data();
@@ -165,7 +174,7 @@ function Navbar() {
         {
           id: 'about-col-1',
           title: 'University',
-          order: 1,
+          order: 3,
           items: [
             { title: 'Our University', url: '/our-university', isExternal: false },
             { title: 'Mission & Vision', url: '/mission', isExternal: false },
@@ -185,10 +194,9 @@ function Navbar() {
         {
           id: 'about-col-3',
           title: 'Information',
-          order: 3,
+          order: 1,
           items: [
             { title: 'Tuition Fees', url: '/tuition-fees', isExternal: false },
-            { title: 'Accreditation', url: '/accreditation', isExternal: false },
             { title: 'Contact Us', url: '/contact', isExternal: false }
           ]
         }
