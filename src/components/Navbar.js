@@ -35,7 +35,13 @@ function Navbar() {
           const config = docSnap.data();
           const visibleItems = (config.items || getDefaultNavItems())
             .filter(item => item.visible)
-            .sort((a, b) => a.order - b.order);
+            .sort((a, b) => {
+                const orderA = a.order ?? 999;
+                const orderB = b.order ?? 999;
+                if (a.id === 'undergraduate') return -1;
+                if (b.id === 'undergraduate') return 1;
+                return orderA - orderB;
+              });
           console.log('Processed navbar items:', visibleItems);
           setNavbarItems(visibleItems);
         } else {
@@ -86,71 +92,69 @@ function Navbar() {
 
   // UPDATED: Default navbar items (same as in NavbarEditor for consistency)
   const getDefaultNavItems = () => [
-    {
-      id: 'undergraduate',
-      title: 'Undergraduate',
-      type: 'megamenu',
-      visible: true,
-      order: 1,
-      megaMenuColumns: [
-        {
-          id: 'col-1',
-          title: 'Business Programs',
-          order: 1,
-          items: [
-//            { title: 'All Undergraduate Programs', url: '/undergraduate', isExternal: false },
-            { title: 'Business Administration', url: '/program/business-admin', isExternal: false },
-            { title: 'Marketing', url: '/program/marketing', isExternal: false }
-          ]
-        },
-        {
-          id: 'col-2',
-          title: 'Technology Programs',
-          order: 2,
-          items: [
-            { title: 'Computer Science', url: '/program/computer-science', isExternal: false },
-            { title: 'Information Technology', url: '/program/it', isExternal: false }
-          ]
-        },
-        {
-          id: 'col-3',
-          title: 'Resources',
-          order: 3,
-          items: [
-            { title: 'Academic Calendar', url: '/academic-calendar', isExternal: false },
-            { title: 'Course Catalog', url: '/catalog', isExternal: false },
-            { title: 'Admissions Info', url: '/admissions', isExternal: false }
-          ]
-        }
-      ]
-    },
-    {
-      id: 'graduate',
-      title: 'Graduate',
-      type: 'megamenu',
-      visible: true,
-      order: 2,
-      megaMenuColumns: [
-        {
-          id: 'grad-col-1',
-          title: 'Master\'s Programs',
-          order: 1,
-          items: [
-  //          { title: 'All Graduate Programs', url: '/graduate', isExternal: false },
-            { title: 'MBA', url: '/program/mba', isExternal: false }
-          ]
-        },
-        {
-          id: 'grad-col-2',
-          title: 'Resources',
-          order: 2,
-          items: [
-            { title: 'Graduate Admissions', url: '/graduate-admissions', isExternal: false },
-            { title: 'Research Opportunities', url: '/research', isExternal: false }
-          ]
-        }
-      ]
-    },
+  {
+    id: 'undergraduate',
+    title: 'Undergraduate',
+    type: 'megamenu',
+    visible: true,
+    order: 1,
+    megaMenuColumns: [
+      {
+        id: 'col-1',
+        title: 'Business Programs',
+        order: 1,
+        items: [
+          { title: 'Business Administration', url: '/program/business-admin', isExternal: false },
+          { title: 'Marketing', url: '/program/marketing', isExternal: false }
+        ]
+      },
+      {
+        id: 'col-2',
+        title: 'Technology Programs',
+        order: 2,
+        items: [
+          { title: 'Computer Science', url: '/program/computer-science', isExternal: false },
+          { title: 'Information Technology', url: '/program/it', isExternal: false }
+        ]
+      },
+      {
+        id: 'col-3',
+        title: 'Resources',
+        order: 3,
+        items: [
+          { title: 'Academic Calendar', url: '/academic-calendar', isExternal: false },
+          { title: 'Course Catalog', url: '/catalog', isExternal: false },
+          { title: 'Admissions Info', url: '/admissions', isExternal: false }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'graduate',
+    title: 'Graduate',
+    type: 'megamenu',
+    visible: true,
+    order: 2,
+    megaMenuColumns: [
+      {
+        id: 'grad-col-1',
+        title: "Master's Programs",
+        order: 1,
+        items: [
+          { title: 'MBA', url: '/program/mba', isExternal: false }
+        ]
+      },
+      {
+        id: 'grad-col-2',
+        title: 'Resources',
+        order: 2,
+        items: [
+          { title: 'Graduate Admissions', url: '/graduate-admissions', isExternal: false },
+          { title: 'Research Opportunities', url: '/research', isExternal: false }
+        ]
+      }
+    ]
+  },
     {
       id: 'about',
       title: 'About',

@@ -765,7 +765,7 @@ export const fetchNavbarConfig = async () => {
                 title: 'Programs',
                 order: 1,
                 items: [
-                  { title: 'All Undergraduate Programs', url: '/undergraduate', isExternal: false }
+                        { title: 'Business Administration', url: '/program/business-admin', isExternal: false },
                 ]
               },
               {
@@ -791,7 +791,7 @@ export const fetchNavbarConfig = async () => {
                 title: 'Programs',
                 order: 1,
                 items: [
-                  { title: 'All Graduate Programs', url: '/graduate', isExternal: false }
+                        { title: 'MBA', url: '/program/mba', isExternal: false }
                 ]
               },
               {

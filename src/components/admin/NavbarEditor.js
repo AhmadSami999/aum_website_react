@@ -336,7 +336,7 @@ const NavbarEditor = () => {
           title: 'Business Programs',
           order: 1,
           items: [
-            { title: 'All Undergraduate Programs', url: '/undergraduate', isExternal: false },
+//            { title: 'All Undergraduate Programs', url: '/undergraduate', isExternal: false },
             { title: 'Business Administration', url: '/program/business-admin', isExternal: false }
           ]
         }
