@@ -72,8 +72,7 @@ function UserStatus() {
   if (!currentUser) {
     return (
       <div className="user-status">
-        <Link to="/login" className="login-link">Student Login</Link>
-        <Link to="/signin" className="login-link admin-signin">Admin Login</Link>
+        <Link to="/signin" className="login-link admin-signin">MY AUM</Link>
       </div>
     );
   }
