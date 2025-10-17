@@ -9,6 +9,7 @@ import { ResizedImageHandler } from './components/ResizedImageHandler';
 /* ---------- Public components ---------- */
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import Contact from './components/Contact';
 import Undergraduate from './components/Undergraduate';
 import Graduate from './components/Graduate';
 import OurUniversity from './components/OurUniversity';
@@ -298,6 +299,17 @@ function App() {
                   </>
                 }
               />
+
+           <Route
+             path="/contact"
+             element={
+               <>
+                 <Navbar />
+                 <Contact />
+                 <Footer />
+               </>
+             }
+           />
 
               {/* ---------- Auth ---------- */}
               <Route path="/signin" element={<SignIn />} />
