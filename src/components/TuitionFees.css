@@ -2,10 +2,11 @@
   width: 100%;
   min-height: 100vh;
   background-color: #ffffff;
-  font-family: Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   padding: 50px 70px 80px;
 }
 
+/* ---------- HEADER ---------- */
 .tuition-fees-page .tuition-header {
   text-align: center;
   margin-bottom: 60px;
@@ -17,14 +18,34 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* Subtitle + One-time side by side */
+.subtitle-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .tuition-fees-page .tuition-header h2 {
   font-size: 32px;
   font-weight: 400;
   color: #999997;
+  margin: 0;
 }
 
+.tuition-fees-page .one-time {
+  font-size: 18px;
+  color: #104b87;
+  font-weight: 600;
+  background: #f1f6fb;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+/* ---------- CARD GRID ---------- */
 .tuition-fees-page .tuition-fee-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -32,25 +53,32 @@
   margin-top: 30px;
 }
 
+/* ---------- CARD STYLE ---------- */
 .tuition-fees-page .tuition-card {
   background-color: #ffffff;
-  border: 1px solid #ccc;
-  padding: 30px;
-  border-radius: 0;
-  display: flex;
-  flex-direction: column;
+  border: 1px solid #e5e5e5;
+  border-top: 4px solid #104b87;
+  padding: 40px 30px;
+  border-radius: 8px;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tuition-fees-page .tuition-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
 .tuition-fees-page .tuition-card h3 {
   font-size: 24px;
   color: #000000;
-  font-weight: 300;
+  font-weight: 500;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+
+/* ---------- PRICE AREA ---------- */
+.price-block {
   margin-bottom: 20px;
 }
 
@@ -59,7 +87,7 @@
   color: #000000;
   font-weight: 300;
   line-height: 1;
-  margin: 10px 0 8px;
+  margin: 0 0 8px;
 }
 
 .tuition-fees-page .tuition::first-letter {
@@ -71,43 +99,20 @@
 .tuition-fees-page .admission {
   font-size: 16px;
   color: #5c80a5;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
-.tuition-fees-page .description {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 20px;
-  flex-grow: 1;
-}
-
-.tuition-fees-page .select-btn {
-  margin-top: 20px;
-  padding: 10px 0;
-  font-size: 16px;
-  font-weight: 400;
-  background-color: #5c80a5;
-  color: #ffffff;
-  border: none;
-  border-radius: 0;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.tuition-fees-page .select-btn:hover {
-  background-color: #5c80a5;
-}
-
+/* ---------- PROGRAMS ---------- */
 .tuition-fees-page .programs {
-  margin: 20px -30px 0;
-  padding-top: 10px;
+  margin-top: 20px;
+  padding-top: 15px;
   border-top: 1px solid #ddd;
   font-size: 14px;
   color: #5c80a5;
   text-align: center;
 }
 
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 1024px) {
   .tuition-fees-page .tuition-fee-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -118,13 +123,25 @@
   .tuition-fees-page {
     padding: 30px 20px 60px;
   }
+
   .tuition-fees-page .tuition-header h1 {
     font-size: 38px;
   }
+
   .tuition-fees-page .tuition-header h2 {
     font-size: 20px;
   }
+
+  .tuition-fees-page .one-time {
+    font-size: 14px;
+    padding: 3px 8px;
+  }
+
   .tuition-fees-page .tuition-fee-cards {
     grid-template-columns: 1fr;
+  }
+
+  .tuition-fees-page .tuition {
+    font-size: 48px;
   }
 }

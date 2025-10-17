@@ -18,7 +18,7 @@ function TuitionFees() {
   }, []);
 
   if (loading) return <div className="tuition-fees-page">Loading...</div>;
-  if (!data)   return <div className="tuition-fees-page">Tuition fee data not found.</div>;
+  if (!data) return <div className="tuition-fees-page">Tuition fee data not found.</div>;
 
   return (
     <HelmetProvider>
@@ -30,17 +30,20 @@ function TuitionFees() {
 
         <div className="tuition-header">
           <h1>{data.title}</h1>
-          <h2>{data.subtitle}</h2>
+          <div className="subtitle-wrapper">
+            <h2>{data.subtitle}</h2>
+            <span className="one-time">One-time</span>
+          </div>
         </div>
 
         <div className="tuition-fee-cards">
-          {data.cards.map(card => (
+          {data.cards.map((card) => (
             <div className="tuition-card" key={card.id}>
               <h3>{card.heading}</h3>
-              <p className="tuition">{card.tuition}</p>
-              <p className="admission">{card.admission}</p>
-              <div className="description rich-text-content" dangerouslySetInnerHTML={{ __html: card.description }} />
-              <button className="select-btn">Select</button>
+              <div className="price-block">
+                <p className="tuition">{card.tuition}</p>
+                <p className="admission">{card.admission}</p>
+              </div>
               <p className="programs">{card.programs}</p>
             </div>
           ))}
